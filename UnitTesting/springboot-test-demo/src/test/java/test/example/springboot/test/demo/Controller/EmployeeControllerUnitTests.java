@@ -63,7 +63,7 @@ public class EmployeeControllerUnitTests {
         response.andDo(print()).
                 andExpect(status().isCreated())
                 .andExpect(jsonPath("$.firstName",
-                        is(employee.getFirstName()+" ")))
+                        is(employee.getFirstName())))
                 .andExpect(jsonPath("$.lastName",
                         is(employee.getLastName())))
                 .andExpect(jsonPath("$.email",
